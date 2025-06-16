@@ -1,0 +1,338 @@
+* {
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    min-width: 56.25;
+    line-height: 1.5;
+}
+main {
+    width: 56.25rem;
+    margin: 0 auto;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+#stat-ul {
+    column-gap: 5rem;
+}
+
+.hover-line, .social-link > p {
+    display: inline-block;
+    position: relative;
+}
+
+.hover-line::after, .social-link > p::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 0.063rem;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    transform-origin: bottom center;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-line:hover::after, .social-link > p:hover::after {
+    transform: scaleX(1);
+}
+
+.icon {
+    font-size: 2rem;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50rem;
+    margin: 0 auto;
+    font-weight: 600;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo-text {
+    margin-left: 0.313rem;
+}
+
+.nav-link {
+    margin: 0.313rem;
+    padding: 0.63rem;
+    font-size: 1rem;
+    text-decoration: overline;
+    text-decoration-thickness: 0.13rem;
+}
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 50rem;
+    margin: 7.5rem auto 12.5rem;
+}
+.hero-heading {
+    font-size: 5rem;
+    font-weight: 700;
+    margin: 0;
+    color: #007000;
+    text-shadow: 0 0 0.063rem #000;
+}
+.hero-heading span {
+    color: #000;
+    font-weight: 700;
+    line-height: 1;
+    text-shadow: 0 0 0.313rem #fff;
+}
+.hero-text {
+    font-size: 1.25rem;
+    max-width: 18.75rem;
+    margin-bottom: 1.9rem;
+}
+.hero-image {
+    max-width: 28.13rem;
+    position: absolute;
+    right: -1.25rem;
+    top: -6.25rem;
+    z-index: -1;
+}
+.hero-link {
+    background-color: #000;
+    color: white;
+    text-shadow: 0 0 0.13rem #333333;
+    padding: 0.5rem 1.25rem;
+    border-radius: 2.5rem;
+    width: 6.25rem;
+    min-width: fit-content;
+    box-shadow: 0.13rem 0.13rem #737373;
+    text-align: center;
+    text-decoration: none;
+}
+
+.colour-invert {
+    position: relative;
+    /* overflow: hidden; */
+    transition: color 0.25s;
+    z-index: 1;
+}
+
+.colour-invert::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: #007000; /* Inverted background */
+    border-radius: inherit;
+    z-index: -1;
+    transition: width 0.4s cubic-bezier(.4,0,.2,1), box-shadow 0.4s cubic-bezier(.4,0,.2,1);;
+    transform: translateX(-50%);
+    box-shadow: none;
+}
+
+.colour-invert:hover::before {
+    width: 100%;
+    box-shadow: 0.13rem 0.13rem #000;
+}
+
+/* Info Section */
+.info-section {
+    margin: 20rem auto 10rem;
+    width: 50rem;
+}
+.info {
+    margin-left: 12.5rem;
+}
+.info-heading {
+    font-size: 3rem;
+    margin: 0;
+}
+.info a {
+    color: #007000;
+    max-width: fit-content;
+    display: inline;
+    text-decoration: underline dotted;
+}
+
+.info a:hover, .info a:active {
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.statistics {
+    width: 38.75rem;
+    width: 100%;
+    position: relative;
+    background-color: #333333;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.63rem 1.9rem;
+}
+.info-image {
+    position: absolute;
+    left: -1.88rem;
+    top: -10.6rem;
+    max-width: 12.5rem;
+}
+.stat-heading {
+    color: #aaaaaa;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+}
+.stat p {
+    color: #ffffff;
+}
+
+/* About Section */
+.about-section {
+    background-image: url(images/clouds.jpg);
+    background-size: cover;
+    background-color: #dae8f0;
+    background-blend-mode: overlay;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 43.75rem;
+    margin: 0 auto;
+    padding: 2.5rem;
+    border: 0.13rem solid #333333;
+    margin-bottom: 7rem;
+}
+.about-heading {
+    margin: 0;
+    font-size: 3rem;
+}
+.about span {
+    color: #007000;
+}
+.about-link {
+    margin-top: 1.9rem;
+    margin-bottom: 1.9rem;
+}
+
+.about a {
+    border: 0.13rem solid #333333;
+    text-decoration: underline dotted #007000;
+    padding: 0.5rem 1.25rem;
+    border-radius: 2.5rem;
+    transition-duration: 200ms;
+    box-shadow: 0.063rem 0.063rem #333333;
+}
+
+.about a:hover, .about a:active {
+    background-color: #9ce2fb;
+    box-shadow: inset 0 0 0.19rem #007000;
+    text-decoration: underline;
+}
+
+/* Sign Up Form */
+.form-heading {
+    font-size: 3rem;
+    margin: 0;
+}
+.form-intro {
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+.form-section {
+    margin: 7.5rem auto;
+    width: 28.13rem;
+    text-align: center;
+}
+
+.input {
+    display: block;
+    width: 18.75rem;
+    margin: 0.313rem auto 0.63rem;
+    border-radius: 1.25rem;
+    padding: 0.5rem 1.25rem;
+    border: 0.13rem solid #333333;
+	font-family: 'Poppins', sans-serif;
+}
+.input::-webkit-input-placeholder {
+    color: #534e4e;
+}
+
+.input::placeholder {
+    font-weight: 500;
+    color: #534e4e;
+
+}
+
+.submit-button {
+    all: unset;
+    border: 0.13rem solid #333333;
+    padding: 0.5rem 1.25rem;
+    border-radius: 2.5rem;
+    margin: 0.63rem auto 0;
+    width: 8.13rem;
+	font-family: 'Poppins', sans-serif;
+}
+.submit-button:hover {
+    background-color: #dddddd;
+    cursor: pointer;
+}
+
+/* Footer */
+.footer {
+    background-color: #333333;
+}
+.social-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1.25rem 2.5rem;
+    width: 50rem;
+    color: #b8d15c;
+    text-shadow: 0 0 0.13rem #000;
+}
+.social-links p {
+    display: inline;
+    font-size: 1rem;
+}
+.social-links ion-icon {
+    padding-right: 0.63rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    text-decoration: overline;
+}
+
+.social-link > p::after {
+    background-color: #b8d15c;
+}
