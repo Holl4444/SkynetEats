@@ -8,10 +8,12 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
         
         <link rel="stylesheet" href="index.css">
+        <script src="index.js" defer></script>
     </head>
     <body>
         <!-- Navigation bar -->
         <nav class="navbar">
+            <a href="#main" class="skip-nav-link colour-invert">Skip to main</a>
             <div class="logo">
                 <span class="iconify icon" data-icon="healthicons:drone-outline"></span>
                 <p class="logo-text">Skynet Eats</p>
@@ -25,7 +27,7 @@
         </nav>
         
         <!-- Main content -->
-        <main>
+        <main id="main">
             <!-- Hero section -->
             <section class="hero-section">
                 <img class="hero-image" src="images/hero-image.jpg" alt="A cartoon image of the sun setting behind mountains framing an idyllic countryside scene. Flying past trees and over a lake is a drone with a basket of groceries saying 'I come with peas!'"/>
@@ -88,7 +90,7 @@
                     <label for="email-input">Email:</label>
                     <input class="input" type="email" id="email-input" placeholder="Frodo@one-ring.com" />
                     
-                    <button class="submit-button" type="button" onclick="submitForm()">Notify me</button>
+                    <button class="submit-button" type="button">Notify me</button>
                 </form>
             </section>
 
