@@ -149,7 +149,7 @@ ul {
     background: #007000; /* Inverted background */
     border-radius: inherit;
     z-index: -1;
-    transition: width 0.4s cubic-bezier(.4,0,.2,1), box-shadow 0.4s cubic-bezier(.4,0,.2,1);;
+    transition: width 0.4s cubic-bezier(.4,0,.2,1), box-shadow 0.4s cubic-bezier(.4,0,.2,1);
     transform: translateX(-50%);
     box-shadow: none;
 }
